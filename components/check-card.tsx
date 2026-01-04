@@ -174,16 +174,18 @@ export default function CheckCard({ check, onPress }: CheckCardProps) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#fff',
-    borderRadius: 12,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
     marginBottom: 15,
     marginHorizontal: 15,
-    padding: 15,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#E2E8F0',
+    shadowColor: '#0F172A',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 3,
   },
   header: {
     flexDirection: 'row',
@@ -195,14 +197,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   amount: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#000',
+    fontSize: 22,
+    fontWeight: '700',
+    color: '#0F172A',
     marginBottom: 4,
   },
   beneficiary: {
     fontSize: 14,
-    color: '#666',
+    color: '#64748B',
   },
   statusBadge: {
     paddingHorizontal: 10,
@@ -213,11 +215,11 @@ const styles = StyleSheet.create({
   statusText: {
     color: '#fff',
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   divider: {
     height: 1,
-    backgroundColor: '#eee',
+    backgroundColor: '#E2E8F0',
     marginBottom: 12,
   },
   details: {
@@ -230,13 +232,13 @@ const styles = StyleSheet.create({
   },
   detailLabel: {
     fontSize: 12,
-    color: '#999',
+    color: '#94A3B8',
     fontWeight: '600',
   },
   detailValue: {
     fontSize: 12,
-    color: '#333',
-    fontWeight: '500',
+    color: '#334155',
+    fontWeight: '600',
   },
   notesRow: {
     flexDirection: 'column',
@@ -244,7 +246,7 @@ const styles = StyleSheet.create({
   },
   notesValue: {
     fontSize: 12,
-    color: '#555',
+    color: '#475569',
     marginTop: 4,
     fontStyle: 'italic',
   },
@@ -255,25 +257,25 @@ const styles = StyleSheet.create({
   actionButton: {
     flex: 1,
     paddingVertical: 10,
-    borderRadius: 6,
+    borderRadius: 10,
     alignItems: 'center',
   },
   actionCash: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#22C55E',
   },
   actionDelete: {
-    backgroundColor: '#f44336',
+    backgroundColor: '#EF4444',
   },
   actionText: {
     color: '#fff',
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: '700',
   },
   reminderBanner: {
-    backgroundColor: '#FF6B6B',
+    backgroundColor: '#F97316',
     paddingVertical: 8,
     paddingHorizontal: 12,
-    borderRadius: 6,
+    borderRadius: 10,
     marginBottom: 12,
     alignItems: 'center',
   },
