@@ -3,11 +3,11 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
+import { useColorScheme } from 'react-native';
 import 'react-native-reanimated';
 
 import { AuthProvider, useAuth } from '@/context/auth-context';
 import { ChecksProvider } from '@/context/checks-context';
-import { useColorScheme } from '@/hooks/use-color-scheme';
 import { notificationService } from '@/utils/notifications';
 import LoginScreen from './login';
 
