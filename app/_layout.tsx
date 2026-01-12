@@ -8,7 +8,6 @@ import 'react-native-reanimated';
 
 import { AuthProvider, useAuth } from '@/context/auth-context';
 import { ChecksProvider } from '@/context/checks-context';
-import { notificationService } from '@/utils/notifications';
 import LoginScreen from './login';
 
 // Configure AsyncStorage globally
@@ -16,22 +15,6 @@ import LoginScreen from './login';
 
 function RootLayoutContent() {
   const { isLoggedIn, loading } = useAuth();
-
-  // Initialiser les notifications au démarrage
-  useEffect(() => {
-    const initNotifications = async () => {
-      try {
-        const hasPermission = await notificationService.requestPermissions();
-        if (hasPermission) {
-          console.log('✅ Notifications activées');
-        }
-      } catch (error) {
-        console.error('Erreur initialisation notifications:', error);
-      }
-    };
-
-    initNotifications();
-  }, []);
 
   if (loading) {
     return null;
