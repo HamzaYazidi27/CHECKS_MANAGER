@@ -1,80 +1,158 @@
-# 💰 CHECKS - Application de Gestion de Chèques
+# CHECKS_MANAGER - Présentation# 💰 CHECKS - Application de Gestion de Chèques
 
-## 🎯 Vue d'Ensemble
 
-**CHECKS** est une application mobile **moderne, sécurisée et intuitive** pour gérer vos chèques personnels. Développée en **React Native** avec **Expo**, elle offre une expérience utilisateur exceptionnelle sur iOS, Android et Web.
 
----
+## 📱 À propos## 🎯 Vue d'Ensemble
 
-## ✨ Fonctionnalités Principales
 
-### 👤 Gestion d'Utilisateur
+
+Application React Native pour gérer et suivre les chèques.**CHECKS** est une application mobile **moderne, sécurisée et intuitive** pour gérer vos chèques personnels. Développée en **React Native** avec **Expo**, elle offre une expérience utilisateur exceptionnelle sur iOS, Android et Web.
+
+
+
+## ✨ Fonctionnalités principales---
+
+
+
+1. **Authentification**## ✨ Fonctionnalités Principales
+
+   - Créer un compte
+
+   - Se connecter### 👤 Gestion d'Utilisateur
+
 - **Inscription facile** avec email, mot de passe et nom
-- **Connexion sécurisée** avec stockage de session
-- **Déconnexion** avec confirmation
-- **Profil utilisateur** avec informations personnelles
 
-### 🧾 Gestion de Chèques
+2. **Gestion des chèques**- **Connexion sécurisée** avec stockage de session
+
+   - Ajouter un chèque- **Déconnexion** avec confirmation
+
+   - Modifier un chèque- **Profil utilisateur** avec informations personnelles
+
+   - Supprimer un chèque
+
+   - Marquer comme encaissé### 🧾 Gestion de Chèques
+
 Enregistrez complètement vos chèques avec:
-- **Montant** (support décimal)
-- **Bénéficiaire** (qui reçoit le chèque)
-- **Numéro de chèque** (optionnel)
-- **Date de dépôt** (quand vous l'avez déposé)
-- **Date de finalisation** (quand l'encaisser)
+
+3. **Filtrage**- **Montant** (support décimal)
+
+   - Tous les chèques- **Bénéficiaire** (qui reçoit le chèque)
+
+   - À encaisser- **Numéro de chèque** (optionnel)
+
+   - Bientôt (< 7 jours)- **Date de dépôt** (quand vous l'avez déposé)
+
+   - Encaissés- **Date de finalisation** (quand l'encaisser)
+
 - **Notes** (remarques additionnelles)
 
-### 📊 Statuts Automatiques
-Statuts mis à jour **automatiquement** selon les dates:
+4. **Suivi automatique**
+
+   - Les statuts se mettent à jour automatiquement### 📊 Statuts Automatiques
+
+   - Sauvegarde locale des donnéesStatuts mis à jour **automatiquement** selon les dates:
+
 - 🟢 **En attente** - Plus de 7 jours avant l'échéance
-- 🟠 **À encaisser bientôt** - Moins de 7 jours
+
+## 🏗️ Architecture- 🟠 **À encaisser bientôt** - Moins de 7 jours
+
 - 🔴 **À encaisser** - Aujourd'hui ou en retard
-- ⚫ **Encaissé** - Marqué comme complété
 
-### 📋 Filtrage Intelligent
-Voir exactement ce que vous cherchez:
-- **Tous** - Tous vos chèques
-- **À encaisser** - Ceux urgents à traiter
+```- ⚫ **Encaissé** - Marqué comme complété
+
+Écrans
+
+  ├── Login (Authentification)### 📋 Filtrage Intelligent
+
+  ├── Checks (Liste + Filtres)Voir exactement ce que vous cherchez:
+
+  ├── AddCheck (Formulaire)- **Tous** - Tous vos chèques
+
+  └── Profile (Profil utilisateur)- **À encaisser** - Ceux urgents à traiter
+
 - **À encaisser bientôt** - Ceux qui arrivent
-- **Encaissés** - Historique complet
 
-### 💹 Statistiques en Temps Réel
+État Global (Context)- **Encaissés** - Historique complet
+
+  ├── AuthContext (Gestion utilisateur)
+
+  └── ChecksContext (Gestion chèques)### 💹 Statistiques en Temps Réel
+
 - **Total** des montants enregistrés
-- **À encaisser** aujourd'hui
-- **Déjà encaissés** pour suivi
+
+Stockage- **À encaisser** aujourd'hui
+
+  └── AsyncStorage (Données locales)- **Déjà encaissés** pour suivi
+
+```
 
 ---
+
+## 💻 Technologies
 
 ## 🎨 Interface & Expérience
 
-### Design Modern
-✅ Interface **clean et intuitive**
-✅ Navigation par **onglets facile**
-✅ **Animations fluides**
-✅ **Mode clair et sombre** automatique
-✅ **Accessible** sur tous les écrans
+- **Framework**: React Native + Expo
 
-### Actions Rapides
-✅ Bouton **FAB** pour ajouter rapidement
-✅ Swipe pour **encaisser rapidement**
-✅ **Confirmations** pour les actions importantes
+- **Langage**: TypeScript### Design Modern
+
+- **Navigation**: Expo Router✅ Interface **clean et intuitive**
+
+- **Stockage**: AsyncStorage✅ Navigation par **onglets facile**
+
+- **État**: React Context✅ **Animations fluides**
+
+✅ **Mode clair et sombre** automatique
+
+## 🚀 Utilisation✅ **Accessible** sur tous les écrans
+
+
+
+```bash### Actions Rapides
+
+npm install✅ Bouton **FAB** pour ajouter rapidement
+
+npm start✅ Swipe pour **encaisser rapidement**
+
+```✅ **Confirmations** pour les actions importantes
+
 ✅ **Messages clairs** en cas d'erreur
 
+Puis scanner le QR code avec Expo Go.
+
 ---
+
+## 📊 Statuts des chèques
 
 ## 🔐 Sécurité & Confidentialité
 
-### ✅ Données Privées
-- Stockage **local uniquement** sur votre appareil
-- **Aucun partage** d'informations
-- **Isolation complète** par utilisateur
-- Les données restent **entièrement vôtres**
+| Statut | Couleur | Condition |
 
-### ⚠️ À Savoir
+|--------|--------|-----------|### ✅ Données Privées
+
+| PENDING | Vert | > 7 jours |- Stockage **local uniquement** sur votre appareil
+
+| UPCOMING | Orange | 0-7 jours |- **Aucun partage** d'informations
+
+| DUE | Rouge | Passé ou aujourd'hui |- **Isolation complète** par utilisateur
+
+| CASHED | Gris | Encaissé |- Les données restent **entièrement vôtres**
+
+
+
+## 📁 Structure des fichiers### ⚠️ À Savoir
+
 - Version initiale: Stockage non chiffré
-- Pour production: Implémenter backend sécurisé
-- Voir `DEPLOYMENT.md` pour améliorations sécurité
 
----
+- `app/` - Écrans principales- Pour production: Implémenter backend sécurisé
+
+- `components/` - Composants réutilisables- Voir `DEPLOYMENT.md` pour améliorations sécurité
+
+- `context/` - Gestion d'état
+
+- `utils/` - Fonctions helper---
+
+- `types/` - Définitions TypeScript
 
 ## 🚀 Démarrage Rapide
 

@@ -1,37 +1,71 @@
-# Welcome to your Expo app 👋
+# CHECKS_MANAGER# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
 
-1. Install dependencies
+Application simple de gestion de chèques en React Native.This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-   ```bash
-   npm install
+
+
+## Fonctionnalités## Get started
+
+
+
+- 🔐 Authentification utilisateur1. Install dependencies
+
+- ✅ CRUD des chèques
+
+- 📊 Filtrage par statut   ```bash
+
+- 💾 Sauvegarde locale   npm install
+
    ```
+
+## Installation
 
 2. Start the app
 
-   ```bash
-   npx expo start
-   ```
+```bash
 
-In the output, you'll find options to open the app in a
+npm install   ```bash
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+npm start   npx expo start
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+```   ```
+
+
+
+## Structure du projetIn the output, you'll find options to open the app in a
+
+
+
+```- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+
+app/          # Écrans (Login, Checks, AddCheck)- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+
+components/   # Composants réutilisables- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+
+context/      # Gestion d'état- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+utils/        # Fonctions utilitaires
+
+types/        # Définitions TypeScriptYou can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+```
 
 ## Get a fresh project
 
+## Technologies
+
 When you're ready, run:
 
-```bash
-npm run reset-project
-```
+- React Native / Expo
+
+- TypeScript```bash
+
+- Expo Routernpm run reset-project
+
+- AsyncStorage```
+
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
